@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ControlTemplate">
+
+    <!--<ControlTemplate x:Key="TemplateItemList">
+        <StackPanel>
+            <Border Padding="15" CornerRadius="10, 10, 0, 0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFABABAB"/>
+                        <GradientStop Color="#FF202020" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Text="{Binding Name}"></TextBlock>
+            </Border>
+        </StackPanel>
+
+    </ControlTemplate>
+    <Style x:Key="NormalStatus" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background" Value="Blue"></Setter>
+        <Setter Property="Template" Value="{StaticResource TemplateItemList}"></Setter>
+    </Style>
+
+    <ControlTemplate TargetType="{x:Type Button}" x:Key="TemplateButton">
+        <Border Name="fondoboton" BorderBrush="red" BorderThickness="5" Background="Yellow">
+            <ContentPresenter Name="contenido" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}">
+            </ContentPresenter>
+        </Border>
+    </ControlTemplate>-->
+
+    
+</ResourceDictionary>

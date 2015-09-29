@@ -1,0 +1,15 @@
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\bin\Debug\ControlTemplate.exe.config
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\bin\Debug\ControlTemplate.exe
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\bin\Debug\ControlTemplate.pdb
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\BlackList.baml
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\MainWindow.baml
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\App.baml
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\MainWindow.g.cs
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\App.g.cs
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\ControlTemplate_MarkupCompile.cache
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\ControlTemplate_MarkupCompile.lref
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\ControlTemplate.g.resources
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\ControlTemplate.Properties.Resources.resources
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\UserControlListBox.csproj.GenerateResource.Cache
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\ControlTemplate.exe
+c:\users\a.garcia\documents\visual studio 2015\Projects\ListBoxControlExample\ControlTemplate\obj\Debug\ControlTemplate.pdb

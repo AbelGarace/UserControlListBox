@@ -1,0 +1,67 @@
+﻿<Window x:Class="ControlTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlTemplate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="525">
+    <Grid>
+        <!--<Button Content="Hola" Background="{StaticResource GlowFX}" Template="{StaticResource TemplateButton}"/>-->
+        <!--<StackPanel Style="{StaticResource NormalStatus}"></StackPanel>-->
+        <StackPanel>
+        <ListBox Name="lbTodoList" HorizontalContentAlignment="Stretch" Height="auto" Width="auto" ItemsSource="{Binding List}">
+
+            <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel x:Name="item" Margin="0,2,2,0" Height="auto">
+                        <StackPanel.Triggers>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard>
+                                            <Storyboard x:Name="LeaveItem">
+                                                <DoubleAnimation BeginTime="00:00:00"
+                                                             Storyboard.TargetName="item"
+                                                             Duration="00:00:00.250"
+                                                             From="0.5" To="1"
+                                                             Storyboard.TargetProperty="Opacity">
+                                                </DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard x:Name="OverItem">
+                                            <DoubleAnimation BeginTime="00:00:00"
+                                                             Storyboard.TargetName="item"
+                                                             Duration="00:00:00.250"
+                                                             From="1" To="0.5"
+                                                             Storyboard.TargetProperty="Opacity">
+
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                        </StackPanel.Triggers>
+                            
+                        <Border Padding="15" CornerRadius="10, 10, 10, 10" BorderBrush="#FFF1E8E8">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FF9DC0EA"/>
+                                    <GradientStop Color="#FF747171" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Margin="2,2,0,0" Text="{Binding Name}" Foreground="White"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+            
+            <Button Height="25" Width="100"  VerticalAlignment="Bottom" Content="Add User"  Click="Button_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
