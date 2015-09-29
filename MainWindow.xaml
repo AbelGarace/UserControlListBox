@@ -7,8 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="525">
     <Grid>
-        <!--<Button Content="Hola" Background="{StaticResource GlowFX}" Template="{StaticResource TemplateButton}"/>-->
-        <!--<StackPanel Style="{StaticResource NormalStatus}"></StackPanel>-->
         <StackPanel>
         <ListBox Name="lbTodoList" HorizontalContentAlignment="Stretch" Height="auto" Width="auto" ItemsSource="{Binding List}">
 
