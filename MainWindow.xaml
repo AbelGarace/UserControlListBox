@@ -18,33 +18,14 @@
                         <StackPanel.Triggers>
                                 <EventTrigger RoutedEvent="MouseLeave">
                                     <EventTrigger.Actions>
-                                        <BeginStoryboard>
-                                            <Storyboard x:Name="LeaveItem">
-                                                <DoubleAnimation BeginTime="00:00:00"
-                                                             Storyboard.TargetName="item"
-                                                             Duration="00:00:00.250"
-                                                             From="0.5" To="1"
-                                                             Storyboard.TargetProperty="Opacity">
-                                                </DoubleAnimation>
-                                            </Storyboard>
-                                        </BeginStoryboard>
+                                        <BeginStoryboard  Storyboard="{StaticResource LeaveItem}"/>
                                     </EventTrigger.Actions>
                                 </EventTrigger>
                                 <EventTrigger RoutedEvent="MouseEnter">
-                                <EventTrigger.Actions>
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="OverItem">
-                                            <DoubleAnimation BeginTime="00:00:00"
-                                                             Storyboard.TargetName="item"
-                                                             Duration="00:00:00.250"
-                                                             From="1" To="0.5"
-                                                             Storyboard.TargetProperty="Opacity">
-
-                                            </DoubleAnimation>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger.Actions>
-                            </EventTrigger>
+                                    <EventTrigger.Actions>
+                                        <BeginStoryboard Storyboard="{StaticResource OverItem}"/>
+                                    </EventTrigger.Actions>
+                                </EventTrigger>
                         </StackPanel.Triggers>
                             
                         <Border Padding="15" CornerRadius="10, 10, 10, 10" BorderBrush="#FFF1E8E8">
@@ -60,8 +41,25 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-            
-            <Button Height="25" Width="100"  VerticalAlignment="Bottom" Content="Add User"  Click="Button_Click" Margin="5"/>
+
+            <Button Template="{StaticResource BotonAdd}" Height="25" Width="100"  VerticalAlignment="Bottom" Content="Add User"  Click="Button_Click" Margin="5">
+                  <Button.Triggers>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard Storyboard="{StaticResource LeaveButton}">
+                                
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard Storyboard="{StaticResource OverButton}"/>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </Button.Triggers>
+                
+            </Button>                    
+                    
         </StackPanel>
     </Grid>
 </Window>

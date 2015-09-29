@@ -2,31 +2,61 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:ControlTemplate">
 
-    <!--<ControlTemplate x:Key="TemplateItemList">
-        <StackPanel>
-            <Border Padding="15" CornerRadius="10, 10, 0, 0">
-                <Border.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFABABAB"/>
-                        <GradientStop Color="#FF202020" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-                <TextBlock Text="{Binding Name}"></TextBlock>
-            </Border>
-        </StackPanel>
-
-    </ControlTemplate>
-    <Style x:Key="NormalStatus" TargetType="{x:Type ListBoxItem}">
-        <Setter Property="Background" Value="Blue"></Setter>
-        <Setter Property="Template" Value="{StaticResource TemplateItemList}"></Setter>
-    </Style>
-
-    <ControlTemplate TargetType="{x:Type Button}" x:Key="TemplateButton">
-        <Border Name="fondoboton" BorderBrush="red" BorderThickness="5" Background="Yellow">
-            <ContentPresenter Name="contenido" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}">
+    <!--Button Template-->
+    <ControlTemplate TargetType="{x:Type Button}" x:Key="BotonAdd">
+        <Border Name="fondoboton" BorderBrush="#FF1D1616" BorderThickness="5" Background="#FF49B6C1">
+            <ContentPresenter Name="contenido" Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Center" VerticalAlignment="Center">
             </ContentPresenter>
         </Border>
-    </ControlTemplate>-->
+        
+    </ControlTemplate>
 
+    <!-- Storyboard mouse out over item list-->
     
+    <Storyboard x:Key="LeaveItem">
+        <DoubleAnimation BeginTime="00:00:00"                
+                      Duration="00:00:00.250"
+                            From="0.5" To="1"
+         Storyboard.TargetProperty="Opacity">
+        </DoubleAnimation>
+    </Storyboard>
+    
+    <!-- Storyboard mouse over item list-->
+    <Storyboard x:Key="OverItem">
+        <DoubleAnimation BeginTime="00:00:00"                                                             
+                      Duration="00:00:00.250"
+                            From="1" To="0.5"
+          Storyboard.TargetProperty="Opacity">
+
+        </DoubleAnimation>
+    </Storyboard>
+
+    <!-- Storyboard mouse out over item list-->
+
+    <Storyboard x:Key="LeaveButton">
+        <DoubleAnimation BeginTime="00:00:00"                
+                      Duration="00:00:00.250"
+                            From="35" To="25"
+         Storyboard.TargetProperty="Height">
+        </DoubleAnimation>
+        <DoubleAnimation BeginTime="00:00:00"                
+                      Duration="00:00:00.250"
+                            From="120" To="100"
+         Storyboard.TargetProperty="Width">
+        </DoubleAnimation>
+    </Storyboard>
+
+    <!-- Storyboard mouse over item list-->
+    <Storyboard x:Key="OverButton">
+        <DoubleAnimation BeginTime="00:00:00"                                                             
+                      Duration="00:00:00.250"
+                            From="25" To="35"
+          Storyboard.TargetProperty="Height">
+        </DoubleAnimation>
+        <DoubleAnimation BeginTime="00:00:00"                
+                      Duration="00:00:00.250"
+                            From="100" To="120"
+         Storyboard.TargetProperty="Width">
+        </DoubleAnimation>
+    </Storyboard>
 </ResourceDictionary>
